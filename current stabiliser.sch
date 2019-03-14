@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.4.3">
+<eagle version="8.3.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -2617,17 +2617,17 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="OP4" library="custom-ic" deviceset="OPAMP_QUAD" device="SO14" value="ADA4004-4"/>
 <part name="R17" library="custom-passive" deviceset="RES" device="0603" value="10k"/>
 <part name="R18" library="custom-passive" deviceset="RES" device="0603" value="10k"/>
-<part name="R19" library="custom-passive" deviceset="RES" device="0603" value="470R"/>
-<part name="R20" library="custom-passive" deviceset="RES" device="0603" value="4k7"/>
-<part name="R21" library="custom-passive" deviceset="RES" device="0603" value="2k"/>
-<part name="R22" library="custom-passive" deviceset="RES" device="0603" value="2k"/>
+<part name="R19" library="custom-passive" deviceset="RES" device="0603" value="270R"/>
+<part name="R20" library="custom-passive" deviceset="RES" device="0603" value="9k1"/>
+<part name="R21" library="custom-passive" deviceset="RES" device="0603" value="3k6"/>
+<part name="R22" library="custom-passive" deviceset="RES" device="0603" value="3k6"/>
 <part name="C6" library="custom-passive" deviceset="CAP" device="0603" value="1n0"/>
 <part name="C7" library="custom-passive" deviceset="CAP" device="0603" value="10n"/>
 <part name="GND15" library="supply1" deviceset="GND" device=""/>
 <part name="GND16" library="supply1" deviceset="GND" device=""/>
 <part name="GND17" library="supply1" deviceset="GND" device=""/>
 <part name="R23" library="custom-passive" deviceset="RES" device="0603" value="10k"/>
-<part name="R24" library="custom-passive" deviceset="RES" device="0603" value="1k"/>
+<part name="R24" library="custom-passive" deviceset="RES" device="0603" value="300R"/>
 <part name="GND19" library="supply1" deviceset="GND" device=""/>
 <part name="FRAME5" library="frames" deviceset="A4-SMALL-DOCFIELD" device=""/>
 <part name="OP5" library="custom-ic" deviceset="OPAMP_QUAD" device="SO14" value="ADA4004-4"/>
@@ -2709,7 +2709,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="P+9" library="supply1" deviceset="+15V" device=""/>
 <part name="P+10" library="supply1" deviceset="+5V" device=""/>
 <part name="FRAME9" library="frames" deviceset="A4-SMALL-DOCFIELD" device=""/>
-<part name="REF" library="custom-ic" deviceset="LTC6655" device="LS8" value="LTC6655LS8"/>
+<part name="REF" library="custom-ic" deviceset="LTC6655" device="" value="LTC6655"/>
 <part name="C23" library="custom-passive" deviceset="CAP" device="0603" value="100n"/>
 <part name="C24" library="custom-passive" deviceset="CAP" device="0805" value="10u"/>
 <part name="C25" library="custom-passive" deviceset="CAP" device="0603" value="100n"/>
@@ -2882,7 +2882,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="P+3" library="supply1" deviceset="+5V" device=""/>
 <part name="C63" library="custom-passive" deviceset="CAP" device="0805" value="10u"/>
 <part name="C64" library="custom-passive" deviceset="CAP" device="0603" value="100n"/>
-<part name="R56" library="custom-passive" deviceset="RES" device="0603" value="0R"/>
+<part name="R56" library="custom-passive" deviceset="RES" device="0603" value="10R"/>
 <part name="GND18" library="supply1" deviceset="GND" device=""/>
 <part name="GND85" library="supply1" deviceset="GND" device=""/>
 <part name="P+11" library="supply1" deviceset="V+" device="" value="+5VDD_REF"/>
@@ -2901,10 +2901,6 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="VDD5" library="supply1" deviceset="VDD" device="" value="+5VDD_ISO"/>
 <part name="OP10" library="custom-ic" deviceset="OPAMP_QUAD" device="SO14" value="ADA4004-4"/>
 <part name="VREF" library="custom-con" deviceset="TESTPOINT" device=""/>
-<part name="R58" library="custom-passive" deviceset="RES" device="0603" value="390R"/>
-<part name="GND88" library="supply1" deviceset="GND" device=""/>
-<part name="R59" library="custom-passive" deviceset="RES" device="0603" value="390R"/>
-<part name="GND89" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -3666,7 +3662,7 @@ higher freq: unity gain</text>
 <sheet>
 <plain>
 <text x="127" y="162.56" size="5.08" layer="95" align="top-center">Low-Pass Notch Filter</text>
-<text x="109.22" y="134.62" size="2.54" layer="95">double-pole at 16 kHz
+<text x="109.22" y="134.62" size="2.54" layer="95">double-pole at 8.8 kHz
 double-zero at 51 kHz</text>
 <text x="111.76" y="147.32" size="2.54" layer="95">Bainter design</text>
 <wire x1="38.1" y1="116.84" x2="81.28" y2="116.84" width="0.4064" layer="98" style="longdash"/>
@@ -3682,8 +3678,8 @@ double-zero at 51 kHz</text>
 (K2=1)</text>
 <text x="78.74" y="12.7" size="1.778" layer="98">opamp output at low frequencies:
 1)  - NOTCH2_IN
-2)  20 * NOTCH2_IN  &lt;- check here for saturation
-3)  10 * NOTCH2_IN
+2)  67.4 * NOTCH2_IN  &lt;- check here for saturation
+3)  33.7 * NOTCH2_IN
 4)  NOTCH2_IN
 
 max. input: 0.1 V rms</text>
@@ -3697,14 +3693,14 @@ wp = 2pi * 16 kHz
 Qp = 0.99
 
 notch at 51 kHz,
-lowpass with pole at 16 kHz
+lowpass with pole at 8.8 kHz
 lower freq: unity gain
 higher freq: -30 dB</text>
 <wire x1="177.8" y1="104.14" x2="226.06" y2="104.14" width="0.4064" layer="98" style="longdash"/>
 <wire x1="226.06" y1="104.14" x2="226.06" y2="63.5" width="0.4064" layer="98" style="longdash"/>
 <wire x1="226.06" y1="63.5" x2="177.8" y2="63.5" width="0.4064" layer="98" style="longdash"/>
 <wire x1="177.8" y1="63.5" x2="177.8" y2="104.14" width="0.4064" layer="98" style="longdash"/>
-<text x="180.34" y="58.42" size="1.778" layer="98">voltage divider (K3=0.1)</text>
+<text x="180.34" y="58.42" size="1.778" layer="98">voltage divider (K3=0.03)</text>
 </plain>
 <instances>
 <instance part="FRAME4" gate="/1" x="264.16" y="180.34" rot="MR270"/>
@@ -4629,16 +4625,15 @@ V_DAC = 31.52uV * [DAC value]</text>
 <wire x1="157.48" y1="53.34" x2="157.48" y2="17.78" width="0.508" layer="98" style="longdash"/>
 <wire x1="157.48" y1="17.78" x2="121.92" y2="17.78" width="0.508" layer="98" style="longdash"/>
 <wire x1="121.92" y1="17.78" x2="121.92" y2="53.34" width="0.508" layer="98" style="longdash"/>
-<text x="121.92" y="99.06" size="1.778" layer="98">lowpass filter, pole at 16 Hz,
+<text x="121.92" y="99.06" size="1.778" layer="98">lowpass filter, pole at 2.2 Hz,
 to reduce reference noise</text>
-<text x="119.38" y="78.74" size="1.778" layer="91">use 1k resistor (and e.g. 10uF) to ensure 
+<text x="121.92" y="76.2" size="1.778" layer="91">use 1k resistor (and e.g. 10uF) to ensure 
 that both noise and drift of this lowpass filter 
-are not worse than those at the first stage opamp
-
-for 1uF, up to 4.7 kohms (pole at 34 Hz) 
-should also be possible</text>
+are not worse than those at the first stage opamp</text>
 <text x="88.9" y="101.6" size="1.778" layer="91">AD5541A-B</text>
 <text x="91.44" y="10.16" size="1.778" layer="91">AD5541A-B</text>
+<text x="121.92" y="88.9" size="1.778" layer="91">Note: AD5541A is unbuffered
+(6.25 kOhm output impedance)</text>
 </plain>
 <instances>
 <instance part="FRAME7" gate="/1" x="264.16" y="180.34" rot="MR270"/>
@@ -4899,11 +4894,9 @@ should also be possible</text>
 <wire x1="175.26" y1="88.9" x2="175.26" y2="50.8" width="0.508" layer="98" style="longdash"/>
 <wire x1="175.26" y1="50.8" x2="106.68" y2="50.8" width="0.508" layer="98" style="longdash"/>
 <wire x1="106.68" y1="50.8" x2="106.68" y2="88.9" width="0.508" layer="98" style="longdash"/>
-<text x="106.68" y="35.56" size="1.778" layer="98">Anti-aliasing filter, 
-poles at 1 kHz and 6.2 kHz, zero at 3.9 kHz
-(alternative:
-only 1 stage with 1k6 and 100n: pole at 1 kHz)
-cascaded, each 1k6 and 100n: poles at 2.6 kHz and 380 Hz, zero at 2 kHz)</text>
+<text x="116.84" y="38.1" size="1.778" layer="98">Anti-aliasing filter, 
+poles at 161 Hz and 4.1 kHz
+Note: AD5541A adds 6.25 kOhm</text>
 <text x="78.74" y="45.72" size="1.778" layer="91">AD5541A-B</text>
 </plain>
 <instances>
@@ -5074,7 +5067,7 @@ cascaded, each 1k6 and 100n: poles at 2.6 kHz and 380 Hz, zero at 2 kHz)</text>
 <plain>
 <text x="38.1" y="55.88" size="1.778" layer="91">output capacitor ESR should be &lt; 0.1 ohms</text>
 <text x="119.38" y="172.72" size="5.08" layer="95" align="top-center">Voltage Reference</text>
-<text x="88.9" y="154.94" size="2.54" layer="95" align="center-left">provides 2.5V reference for DACs</text>
+<text x="88.9" y="154.94" size="2.54" layer="95" align="center-left">provides 2.048V reference for DACs</text>
 <text x="111.76" y="81.28" size="1.778" layer="91">ceramic capacitors (low ESR)
 
 decouple capacitive load from opamp feedback via 100R
@@ -5093,8 +5086,6 @@ to reduce sensitivity to mechanical stress</text>
 DACs</text>
 <text x="223.52" y="58.42" size="2.54" layer="98">to feedforward
 DAC</text>
-<text x="134.62" y="35.56" size="1.778" layer="91">Potential divider
-to emulate reference of 2V</text>
 </plain>
 <instances>
 <instance part="FRAME9" gate="/1" x="264.16" y="180.34" rot="MR270"/>
@@ -5140,16 +5131,6 @@ to emulate reference of 2V</text>
 <attribute name="VALUE" x="121.92" y="68.58" size="1.778" layer="96"/>
 </instance>
 <instance part="VREF" gate="G$1" x="88.9" y="101.6"/>
-<instance part="R58" gate="G$1" x="149.86" y="111.76" smashed="yes" rot="R270">
-<attribute name="NAME" x="153.4414" y="110.49" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="155.702" y="110.49" size="1.778" layer="96" rot="R90"/>
-</instance>
-<instance part="GND88" gate="1" x="149.86" y="101.6"/>
-<instance part="R59" gate="G$1" x="149.86" y="58.42" smashed="yes" rot="R270">
-<attribute name="NAME" x="153.4414" y="57.15" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="155.702" y="57.15" size="1.778" layer="96" rot="R90"/>
-</instance>
-<instance part="GND89" gate="1" x="149.86" y="48.26"/>
 </instances>
 <busses>
 </busses>
@@ -5201,16 +5182,6 @@ to emulate reference of 2V</text>
 <pinref part="GND67" gate="1" pin="GND"/>
 <pinref part="C26" gate="G$1" pin="2"/>
 <wire x1="175.26" y1="109.22" x2="175.26" y2="104.14" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="R58" gate="G$1" pin="2"/>
-<pinref part="GND88" gate="1" pin="GND"/>
-<wire x1="149.86" y1="106.68" x2="149.86" y2="104.14" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="R59" gate="G$1" pin="2"/>
-<pinref part="GND89" gate="1" pin="GND"/>
-<wire x1="149.86" y1="53.34" x2="149.86" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="V_REF1A" class="0">
@@ -5265,15 +5236,11 @@ to emulate reference of 2V</text>
 <wire x1="162.56" y1="66.04" x2="175.26" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="175.26" y1="66.04" x2="175.26" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="R44" gate="G$1" pin="1"/>
-<wire x1="144.78" y1="66.04" x2="149.86" y2="66.04" width="0.1524" layer="91"/>
 <junction x="162.56" y="66.04"/>
 <pinref part="OP10" gate="G$3" pin="+IN"/>
-<wire x1="149.86" y1="66.04" x2="162.56" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="66.04" x2="162.56" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="175.26" y1="66.04" x2="187.96" y2="66.04" width="0.1524" layer="91"/>
 <junction x="175.26" y="66.04"/>
-<pinref part="R59" gate="G$1" pin="1"/>
-<wire x1="149.86" y1="63.5" x2="149.86" y2="66.04" width="0.1524" layer="91"/>
-<junction x="149.86" y="66.04"/>
 </segment>
 </net>
 <net name="V_REF1_LP" class="0">
@@ -5286,13 +5253,9 @@ to emulate reference of 2V</text>
 <wire x1="162.56" y1="119.38" x2="175.26" y2="119.38" width="0.1524" layer="91"/>
 <wire x1="162.56" y1="119.38" x2="162.56" y2="116.84" width="0.1524" layer="91"/>
 <pinref part="R43" gate="G$1" pin="1"/>
-<wire x1="144.78" y1="119.38" x2="149.86" y2="119.38" width="0.1524" layer="91"/>
 <junction x="162.56" y="119.38"/>
 <pinref part="OP10" gate="G$2" pin="+IN"/>
-<pinref part="R58" gate="G$1" pin="1"/>
-<wire x1="149.86" y1="119.38" x2="162.56" y2="119.38" width="0.1524" layer="91"/>
-<wire x1="149.86" y1="119.38" x2="149.86" y2="116.84" width="0.1524" layer="91"/>
-<junction x="149.86" y="119.38"/>
+<wire x1="144.78" y1="119.38" x2="162.56" y2="119.38" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="V_REF1" class="0">

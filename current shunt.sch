@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.6.0">
+<eagle version="8.3.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
+<setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
@@ -1344,7 +1345,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="FRAME3" library="frames" deviceset="A4-SMALL-DOCFIELD" device=""/>
 <part name="SIG+PWR" library="custom-con" deviceset="MOLEX-KK-1X5" device=""/>
 <part name="R10" library="custom-passive" deviceset="RES" device="0603" value="1k"/>
-<part name="R9" library="custom-passive" deviceset="RES" device="0603" value="20k"/>
+<part name="R9" library="custom-passive" deviceset="RES" device="0603" value="30k"/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="R11" library="custom-passive" deviceset="RES" device="0603" value="1k"/>
 <part name="P+4" library="supply1" deviceset="+12V" device=""/>
@@ -1412,10 +1413,6 @@ to ensure stability</text>
 <text x="81.28" y="142.24" size="1.778" layer="98">Voltage follower opamp circuit</text>
 <text x="203.2" y="30.48" size="1.778" layer="98">I_shunt = 0.1 A/V * V_FF_SHUNT
         = 0.01 A/V * V_FF_SIG</text>
-<text x="33.02" y="22.86" size="2.54" layer="91">IMPORTANT!!! The configuration here seems to result in a
-strong 3MHz oscillation at shunt output. In Lab 2, we
-have removed C5 and replaced C4 with 1nF (and the
-equivalent change for the feedback loop)</text>
 </plain>
 <instances>
 <instance part="R2" gate="G$1" x="53.34" y="104.14" smashed="yes" rot="R90">
@@ -1687,8 +1684,8 @@ zero at 169 MHz</text>
 <wire x1="218.44" y1="43.18" x2="218.44" y2="137.16" width="0.508" layer="98" style="longdash"/>
 <wire x1="218.44" y1="137.16" x2="71.12" y2="137.16" width="0.508" layer="98" style="longdash"/>
 <text x="76.2" y="132.08" size="1.778" layer="98">Voltage follower opamp circuit</text>
-<text x="198.12" y="12.7" size="1.778" layer="98">I_shunt = 1 A/V * V_FF_SHUNT
-        = 0.05 A/V * V_FF_SIG</text>
+<text x="198.12" y="12.7" size="1.778" layer="98">I_shunt = 1 A/V * V_FB_SHUNT
+        = 0.03 A/V * V_FB_SIG</text>
 </plain>
 <instances>
 <instance part="FRAME2" gate="/1" x="264.16" y="180.34" rot="MR270"/>
